@@ -4,14 +4,11 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
-    /* The Font Family- Really important!! */
     font-family: Arial, sans-serif;
     box-sizing: border-box;
-    background-image: url('Gif/Rick.gif');
-    height: 25vh;
-
-
+    background-color: black;
 }
+
 
 /* reset for images to ensure they ar 100% of the parent container width */
 img {
@@ -35,7 +32,7 @@ img {
 
 /* BIG text styling for the hero section text */
 .hero-text {
-    font-size: 4em;
+    font-size: 2.5em;
     font-weight: bold;
     text-align: top;
 }
@@ -68,6 +65,9 @@ img {
     padding: 1em;
     border-radius: 0.5em;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-in-out;
 }
 
 /* Styling for the topic card titles */
@@ -80,14 +80,45 @@ img {
 
 
 /* Styling for a footer section to take a bit of spcae at the bottom of the page */
-.footer{
+.footer {
     background-color: rgb(71, 71, 71);
     color: white;
-    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pushes items apart */
     padding: 3em 3em;
 }
 
+/* Video Section */
 
+.video-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Door Image Style */
+.video-button {
+    cursor: pointer;
+    width: 5%; /* Adjust size */
+    height: 3%; /* Adjust size */
+
+}
+
+/* Video Player (hidden initially) */
+#videoPlayer {
+    display: none; /* Initially hidden */
+    width: 100%; /* Full width of the container */
+    max-width: 800px; /* Maximum width for the video player */
+    margin: 0 auto; /* Centers the video horizontally */
+    height: auto;
+}
+
+.video-container .fullscreen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the full container without distortion */
+}
+/* hover effect */
 .RickPortal{
     width: 100%;
     height: 70%;
@@ -101,3 +132,11 @@ img {
   .RickPortal:hover {
       transform: scale(1.15);
   }
+  .topic-card:hover {
+    transform: scale(1.05); /* Adjust this scale value as needed */
+}
+.SupportMeText {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: white;
+}

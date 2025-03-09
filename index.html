@@ -12,7 +12,10 @@
 
     <!-- The Hero Section -------------------------------------------------------------------------------------- -->
     <section class="hero">
-        <div class="hero-text">My Showcase Website</div>
+        <div class="hero-text">
+            <p>Website about me</p>
+            <p>Who "me"</p>
+            <p>idk ¯\_(ツ)_/¯</p></div>
     </section>
 
    
@@ -52,8 +55,62 @@
 
     <!-- A Simple Website Footer ------------------------------------------------------------------------------ -->
     <footer class="footer">
+        <!-- Door Image, acts as play button -->
+        <img src="images/Rick Garage door.png" alt="Rick Garage Door" class="video-button" id="playButton" onclick="playVideo()">
+        
+        <!-- Video Element (hidden initially) -->
+        <video id="videoPlayer" width="100%" controls style="display:none;" onended="videoEnded()">
+            <source src="Video/I'm a Leg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <p>&copy; 2025 My Showcase Website By Arti. B</p>
+        <a href="images/Oh, Really.jpg" target="_blank" class="SupportMeText">Support me by buying me Rtx 5090 :></a>
     </footer>
+
+    <script> // JavaScript code & Don't fucking touch it ,Dear future me or ayone reading it
+        // Function to play the video
+        function playVideo() {
+            // Hide the door image and show the video player
+            document.getElementById('playButton').style.display = 'none';
+            document.getElementById('videoPlayer').style.display = 'block';
+    
+            // Play the video
+            const video = document.getElementById('videoPlayer');
+            video.play();
+    
+            // Set the video to fullscreen when clicked
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.mozRequestFullScreen) { // Firefox
+                video.mozRequestFullScreen();
+            } else if (video.webkitRequestFullscreen) { // Chrome, Safari, Opera, Opera GX
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) { // IE/Edge
+                video.msRequestFullscreen();
+            }
+        }
+    
+        // Function when the video ends
+        function videoEnded() {
+            // Hide the video player and show the door image again
+            document.getElementById('videoPlayer').style.display = 'none';
+            document.getElementById('playButton').style.display = 'block';
+    
+            // Exit fullscreen
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) { // Chrome, Safari, Opera, Opera GX
+                document.webkitExitFullscreen();
+            } else if (document.mozCancelFullScreen) { // Firefox
+                document.mozCancelFullScreen();
+            } else if (document.msExitFullscreen) { // IE/Edge
+                document.msExitFullscreen();
+            }
+        }
+    
+        // Event listener to call videoEnded when the video finishes
+        document.getElementById('videoPlayer').addEventListener('ended', videoEnded);
+    </script>
 
 <!-- The end of the whole page- no more content after this! -->
 </body>

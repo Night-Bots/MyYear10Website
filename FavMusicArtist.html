@@ -22,7 +22,7 @@
     <section class="topic">
         <!-- the topic title a big bar with text in it -->
         <div class="topic-title">
-            <h1>Fav Album</h1>
+            <h1>Favorite Album Rank</h1>
         </div>
         <section class="Back2"></section>
         <!-- now a three column grid of images -->
@@ -30,24 +30,59 @@
             
             <!-- one "card" which includes an image with a text below it -->
             <div class="topic-card">
-                <a href="https://www.youtube.com/watch?v=6S20mJvr4vs&list=OLAK5uy_mao9YHfZtBBTlxeT138lO0prcGHzNSWQM"> <img src="images/Tyelr, Album/Igor.png" alt="Igor" class="RickPortal"></a>
-                <h2 class="topic-card-text">Igor</strong></h2>
+                <a href="https://www.youtube.com/watch?v=6S20mJvr4vs&list=OLAK5uy_mao9YHfZtBBTlxeT138lO0prcGHzNSWQM"> <img src="images/Tyelr, Album/Igor.png" alt="Igor" class="AlbumCover"></a>
+                <h2 class="topic-card-text">#1 Igor</strong></h2>
+                <button class="info-btn" onclick="togglePopup('popup1')">More Info</button>
+                <div class="popup" id="popup1">
+                    <p>Igor is the sixth studio album by American rapper Tyler, the Creator, released on May 17, 2019</p>
+                    <p>My favorite song gotta be EARFQUAKE</p>
+                    <p>Second favorite gotta be "ARE WE STILL FRIENDS?"</p>
+                    <p>The album story pretty interesting</p>
+                    <button class="close-btn" onclick="togglePopup('popup1')">Close</button>
+                </div>
             </div>
             <div class="topic-card">
-                <a href="https://www.youtube.com/watch?v=Z-lCE23e12I&list=OLAK5uy_k4n6ZtIK5tVGcq1aexNjVN8CMP1MbM8ew"> <img src="images/Tyelr, Album/Call me if you get lost; The Esate Sale.png" alt="Call me if you get lost: The Esate Sale" class="RickPortal"></a>
-                <h2 class="topic-card-text">Call me if you get lost: The Esate Sale</h2>
+                <a href="https://www.youtube.com/watch?v=Z-lCE23e12I&list=OLAK5uy_k4n6ZtIK5tVGcq1aexNjVN8CMP1MbM8ew"> <img src="images/Tyelr, Album/Call me if you get lost; The Esate Sale.png" alt="Call me if you get lost: The Esate Sale" class="AlbumCover"></a>
+                <h2 class="topic-card-text-CMIYGL">#2 Call me if you get lost: The Esate Sale</h2>
+                <button class="info-btn" onclick="togglePopup('popup2')">More Info</button>
+                <div class="popup" id="popup2">
+                    <p>CALL ME IF YOU GET LOST: The Estate Sale and also known as just The Estate Sale is the deluxe version of Call Me If You Get Lost released on March 31, 2023. It consists of eight songs that did not make it onto Call Me If You Get Lost.</p>
+                    <p>My favorite song in the album and my favorite Tyler, The Creator song is "Sweet / I Thought You Wanted to Dance"</p>
+                    <button class="close-btn" onclick="togglePopup('popup2')">Close</button>
+                </div>
             </div>
             <div class="topic-card">
-                <a href="https://www.youtube.com/watch?v=hCcwCv3G1FQ&list=OLAK5uy_nt1Nw4wT6I7VlzNknxTiIz3hfED0ttO8Q"> <img src="images/Tyelr, Album/Chromakopia.png" alt="Chromakopia" class="RickPortal"></a>
-                <h2 class="topic-card-text">Chromakopia</h2>
+                <a href="https://www.youtube.com/watch?v=hCcwCv3G1FQ&list=OLAK5uy_nt1Nw4wT6I7VlzNknxTiIz3hfED0ttO8Q"> <img src="images/Tyelr, Album/Chromakopia.png" alt="Chromakopia" class="AlbumCover"></a>
+                <h2 class="topic-card-text">#3 Chromakopia</h2>
+                <button class="info-btn" onclick="togglePopup('popup3')">More Info</button>
+                <div class="popup" id="popup3">
+                    <p>Chromakopia is the eighth studio album by American rapper Tyler, the Creator. It was released through Columbia Records on October 28, 2024. On Monday if I remember it right</p>
+                    <p>I can't decide my favorite between "St. Chroma", "Darling, I", "Sticky", "Take Your Mask Off", "Though I Was Dead", "Like Him"</p>
+                    <button class="close-btn" onclick="togglePopup('popup3')">Close</button>
+                </div>
             </div>
             <div class="topic-card">
-                <a href="https://www.youtube.com/watch?v=MvEtKc8-n3s&list=OLAK5uy_kKOFOy7csvAV07ipX0MYHZLIccf3TBcRw"> <img src="images/Tyelr, Album/Flower Boy.png" alt="Flower Boy" class="RickPortal"></a>
-                <h2 class="topic-card-text">Flower Boy</h2>
+                <a href="https://www.youtube.com/watch?v=MvEtKc8-n3s&list=OLAK5uy_kKOFOy7csvAV07ipX0MYHZLIccf3TBcRw"> <img src="images/Tyelr, Album/Flower Boy.png" alt="Flower Boy" class="AlbumCover"></a>
+                <h2 class="topic-card-text">#4 Flower Boy</h2>
+                <button class="info-btn" onclick="togglePopup('popup4')">More Info</button>
+                <div class="popup" id="popup4">
+                    <p>Flower Boy (alternatively titled Scum Fuck Flower Boy) is the fifth studio album by the American rapper Tyler, the Creator, released on July 21, 2017</p>
+                    <p>My favorite song on the album gotta be "See You Again"</p>
+                    <p>And my second Fav is "Glitter"</p>
+                    <P>And my third Fav on the album is "911 / Mr. Lonely", cuz of Frank Ocean part just make it better</P>
+                    <button class="close-btn" onclick="togglePopup('popup4')">Close</button>
+                </div>
             </div>
         </div>
     </section>
 
+    <script>
+        // Function to toggle pop-up visibility
+        function togglePopup(popupId) {
+            var popup = document.getElementById(popupId);
+            popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
 <!-- End of topic one------------------------------------------------------------------------------------------ -->
 
 <!-- Copy and paste the section from above to make your next section -->
@@ -56,11 +91,14 @@
 
     <!-- A Simple Website Footer ------------------------------------------------------------------------------ -->
     <footer class="footer">
-        <p>&copy; 2025 My Showcase Website By Arti. B</p>
-        <div><a href="index.html"> <img src="Gif/Rick&Morty Portal Transparent.gif" alt="Portal" class="ReturnPortal"></a>
-            <h3 class="Return Text">Return</h3>
+        <div class="Portal-Box">
+            <a href="index.html"> <img src="Gif/Rick&Morty Portal Transparent.gif" alt="Portal" class="RickPortal"></a>
+            <h2 class="Portal-Text">Return</strong></h2>
         </div>
+        <p>&copy; 2025 My Showcase Website By Arti. B</p>
+        <p>Shout out to Kanye, The guy who made Graduation LOL</p>z
     </footer>
+    
 
 <!-- The end of the whole page- no more content after this! -->
 </body>
