@@ -33,15 +33,22 @@
             
             <!-- one "card" which includes an image with a text below it -->
             <div class="topic-card">
-                <a href="https://www.google.com/"> <img src="Gif/Rick&Morty Portal Transparent.gif" alt="Portal" class="RickPortal"></a>
+                <img src="Gif/Rick&Morty/Rick Portal.gif" alt="Portal" class="RickPortal" 
+                onclick="playMedia('videoPlayer1', 'audio1')">
+            <video id="videoPlayer1" width="100%" controls style="display:none;">
+                <source src="Video/Rick&Morty/I'm a pickle (Sub).mp4" type="video/mp4">
+            </video>
+            <audio id="audio1">
+                <source src="Audio/Rick&Morty/Rick and Morty Portal Sound Effect V2.mp3" type="audio/mp3">
+            </audio>
                 <h2 class="topic-card-text">Portal to what <strong>dimensions???</strong></h2>
             </div>
             <div class="topic-card">
-                <a href="https://www.google.com/"> <img src="Gif/Rick&Morty Portal Transparent.gif" alt="Portal" class="RickPortal"></a>
+                <a href="https://www.google.com/"> <img src="Gif/Rick&Morty/Rick Portal.gif" alt="Portal" class="RickPortal"></a>
                 <h2 class="topic-card-text">Stuff idk</h2>
             </div>
             <div class="topic-card">
-                <a href="FavMusicArtist.html"> <img src="Gif/Rick&Morty Portal Transparent.gif" alt="Portal" class="RickPortal"></a>
+                <a href="FavMusicArtist.html"> <img src="Gif/Rick&Morty/Rick Portal.gif" alt="Portal" class="RickPortal"></a>
                 <h2 class="topic-card-text">Fav music artist</h2>
             </div>
         </div>
@@ -56,60 +63,49 @@
     <!-- A Simple Website Footer ------------------------------------------------------------------------------ -->
     <footer class="footer">
         <!-- Door Image, acts as play button -->
-        <img src="images/Rick Garage door.png" alt="Rick Garage Door" class="video-button" id="playButton" onclick="playVideo()">
-        
-        <!-- Video Element (hidden initially) -->
-        <video id="videoPlayer" width="100%" controls style="display:none;" onended="videoEnded()">
-            <source src="Video/I'm a Leg.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <img src="images/Rick Garage door.png" alt="Rick Garage Door" class="Rick-Garage-Door" 
+        onclick="playMedia('videoPlayer2', 'audio2')">
+    <video id="videoPlayer2" width="100%" controls style="display:none;">
+        <source src="Video/Rick&Morty/I'm a leg! (Sub).mp4" type="video/mp4">
+    </video>
+    <audio id="audio2">
+        <source src="Audio/Rick&Morty/Rick and Morty Portal Sound Effect V1.mp3" type="audio/mp3">
+    </audio>
         <p>&copy; 2025 My Showcase Website By Arti. B</p>
         <a href="images/Oh, Really.jpg" target="_blank" class="SupportMeText">Support me by buying me Rtx 5090 :></a>
     </footer>
 
-    <script> // JavaScript code & Don't fucking touch it ,Dear future me or ayone reading it
-        // Function to play the video
-        function playVideo() {
-            // Hide the door image and show the video player
-            document.getElementById('playButton').style.display = 'none';
-            document.getElementById('videoPlayer').style.display = 'block';
-    
-            // Play the video
-            const video = document.getElementById('videoPlayer');
-            video.play();
-    
-            // Set the video to fullscreen when clicked
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            } else if (video.mozRequestFullScreen) { // Firefox
-                video.mozRequestFullScreen();
-            } else if (video.webkitRequestFullscreen) { // Chrome, Safari, Opera, Opera GX
-                video.webkitRequestFullscreen();
-            } else if (video.msRequestFullscreen) { // IE/Edge
-                video.msRequestFullscreen();
-            }
-        }
-    
-        // Function when the video ends
-        function videoEnded() {
-            // Hide the video player and show the door image again
-            document.getElementById('videoPlayer').style.display = 'none';
-            document.getElementById('playButton').style.display = 'block';
-    
-            // Exit fullscreen
-            if (document.exitFullscreen) {
-                document.exitFullscreen();
-            } else if (document.webkitExitFullscreen) { // Chrome, Safari, Opera, Opera GX
-                document.webkitExitFullscreen();
-            } else if (document.mozCancelFullScreen) { // Firefox
-                document.mozCancelFullScreen();
-            } else if (document.msExitFullscreen) { // IE/Edge
-                document.msExitFullscreen();
-            }
-        }
-    
-        // Event listener to call videoEnded when the video finishes
-        document.getElementById('videoPlayer').addEventListener('ended', videoEnded);
+
+    <script>
+        function playMedia(videoId, audioId) {
+    // Get the video and audio elements
+    const video = document.getElementById(videoId);
+    const audio = document.getElementById(audioId);
+
+    // Show the video player
+    video.style.display = 'block';
+
+    // Play both video and audio
+    video.play();
+    audio.play();
+
+    // Make the video go fullscreen
+    if (video.requestFullscreen) {
+        video.requestFullscreen();
+    } else if (video.mozRequestFullScreen) { // Firefox
+        video.mozRequestFullScreen();
+    } else if (video.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+        video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) { // IE/Edge
+        video.msRequestFullscreen();
+    }
+
+    // Exit fullscreen when video ends
+    video.onended = function () {
+        document.exitFullscreen();
+        video.style.display = 'none'; // Hide video after playing
+    };
+}
     </script>
 
 <!-- The end of the whole page- no more content after this! -->
