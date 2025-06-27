@@ -1,0 +1,184 @@
+/* A simple css reset */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(40, 40, 40)
+}
+
+
+/* reset for images to ensure they ar 100% of the parent container width */
+img {
+
+    width: 100%;
+}
+
+/* The hero section styling- use your OWN Hero Image URL here */
+.hero {
+    background-image: url('../images/Header/R&M\ Planet\ Blackground.jpg');
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+/* BIG text styling for the hero section text */
+.hero-text {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: top;
+}
+
+/* nice big font on a banner style background */
+.topic-title{
+    color: white;
+    font-size: 2em;
+    padding: 0.1em 3em;
+    background-color: rgb(71, 71, 71);
+}
+
+/* Three column grid with a nice big gap */
+.topic-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6em;
+    /* bring the whole section in off the sides of the page */
+    width: 70%;
+    /* top margin of 3em and center right/left */
+    margin: 3em auto;
+}
+
+
+
+/* Styling for the individual topic cards rounded edges background color and a drop shadow */
+.topic-card{
+    background-color: rgb(71, 71, 71);
+    color: rgb(255, 255, 255);
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-in-out;
+    max-width: 350px; /* or whatever size you prefer */
+    margin: 0 auto;   /* center the card inside the grid cell */
+}
+
+/* Styling for the topic card titles */
+.topic-card-text{
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    /* center align text */
+    text-align: center;
+}
+
+/* Footer Styling */
+/* Styling for a footer section to take a bit of spcae at the bottom of the page */
+.footer {
+    background-color: rgb(71, 71, 71);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pushes items apart */
+    padding: 3em 3em;
+}
+
+.Return-Text {
+  font-size: 1em;
+  text-align: center;       /* centers the text */
+  position: relative;       /* enable positioning */
+  right: 110px;
+}
+
+.FooterText {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    /* center align text */
+    text-align: center;
+}
+
+.FooterRickPortal {
+    cursor: pointer;
+    width: 50%; /* Adjust size */
+    height: 50%; /* Adjust size */
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+}
+
+.SupportMeText {
+    color: white;
+    text-decoration: none;
+    text-decoration-color: white;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+}
+/* Video Section */
+.video-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Video Player (hidden initially) */
+#videoPlayer {
+    display: none; /* Initially hidden */
+    width: 100%; /* Full width of the container */
+    max-width: 800px; /* Maximum width for the video player */
+    margin: 0 auto; /* Centers the video horizontally */
+    height: auto;
+}
+
+.video-container .fullscreen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the full container without distortion */
+}
+/* Button */
+.RickPortal{
+    width: 100%;
+    height: 70%;
+    display: grid;
+    z-index:999;
+    cursor: pointer;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+  }
+
+  /* Door Image Style */
+.Rick-Garage-Door {
+    cursor: pointer;
+    width: 30%; /* Adjust size */
+    height: 50%; /* Adjust size */
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+}
+/* hover effect */
+  .RickPortal:hover {
+      transform: scale(1.15);
+  }
+  .topic-card:hover {
+    transform: scale(1.05);
+}
+
+.Rick-Garage-Door:hover {
+    transform: scale(1.15);
+}
+
+.SupportMeText:hover {
+    transform: scale(1.15);
+}
+
+.FooterRickPortal:hover {
+    transform: scale(1.15);
+}

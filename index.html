@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Css/style.css">
     <title>Main WebPage :></title> 
 </head>
 <!-- This is the main body of the website- ALL your content goes AFTER the <body> tag and before the </body> tag -->
@@ -13,9 +13,9 @@
     <!-- The Hero Section -------------------------------------------------------------------------------------- -->
     <section class="hero">
         <div class="hero-text">
-            <p>Website about me</p>
-            <p>Who "me"</p>
-            <p>idk ¯\_(ツ)_/¯</p></div>
+            <p>AB ~ 24479</p>
+            <p>10DGT</p>
+            <p>Profile lobby</p></div>
     </section>
 
    
@@ -33,30 +33,25 @@
             
             <!-- one "card" which includes an image with a text below it -->
             <div class="topic-card">
-                <img src="Gif/Rick&Morty/Rick Portal.gif" alt="Portal" class="RickPortal" 
-                onclick="playMedia('videoPlayer1', 'audio1')">
-            <video id="videoPlayer1" width="100%" controls style="display:none;">
-                <source src="Video/Rick&Morty/I'm a pickle (Sub).mp4" type="video/mp4">
-            </video>
-            <audio id="audio1">
-                <source src="Audio/Rick&Morty/Rick and Morty Portal Sound Effect V2.mp3" type="audio/mp3">
-            </audio>
-                <h2 class="topic-card-text">Portal to what <strong>dimensions???</strong></h2>
+                <a href="ELT-homepage.html"> <img src="Gif/Rick&Morty/Rick Portal.gif" alt="Portal" class="RickPortal"onclick="playMedia('audio1')"></a>
+                <h2 class="topic-card-text">Electronic Page</h2>
+                <audio id="audio1">
+                    <source src="Audio/Rick&Morty/Rick and Morty Portal Sound Effect V2.mp3.mp3" type="audio/mp3">
+                </audio>
             </div>
             <div class="topic-card">
-                <img src="Gif/Rick&Morty/Rick Portal.gif" alt="Portal" class="RickPortal" 
-                onclick="playMedia('videoPlayer2', 'audio2')">
-            <video id="videoPlayer2" width="100%" controls style="display:none;">
-                <source src="Video/Rick Roll (sub)720p.mp4" type="video/mp4">
-            </video>
-            <audio id="audio2">
-                <source src="Audio/Rick&Morty/Rick and Morty Portal Sound Effect V2.mp3.mp3" type="audio/mp3">
-            </audio>
-                <h2 class="topic-card-text">Ri-Ri-Rick? Is that you?</h2>
+                <a href="DGT-homepage.html"> <img src="Gif/Rick&Morty/Rick Portal.gif" alt="Portal" class="RickPortal"onclick="playMedia('audio2')"></a>
+                <h2 class="topic-card-text">Digital Technology Page</h2>
+                <audio id="audio2">
+                    <source src="Audio/Rick&Morty/Rick and Morty Portal Sound Effect V2.mp3.mp3" type="audio/mp3">
+                </audio>
             </div>
             <div class="topic-card">
-                <a href="FavMusicArtist.html"> <img src="Gif/Rick&Morty/Rick Portal.gif" alt="Portal" class="RickPortal"></a>
+                <a href="FavMusicArtist.html"> <img src="Gif/Rick&Morty/Rick Portal.gif" alt="Portal" class="RickPortal"onclick="playMedia('audio3')"></a>
                 <h2 class="topic-card-text">Fav music artist</h2>
+                <audio id="audio3">
+                    <source src="Audio/Rick&Morty/Rick and Morty Portal Sound Effect V2.mp3.mp3" type="audio/mp3">
+                </audio>
             </div>
         </div>
     </section>
@@ -69,15 +64,48 @@
 
     <!-- A Simple Website Footer ------------------------------------------------------------------------------ -->
     <footer class="footer">
-        <!-- Door Image, acts as play button -->
-        <img src="images/Rick Garage door.png" alt="Rick Garage Door" class="Rick-Garage-Door" 
-        onclick="playMedia('videoPlayer3', 'audio3')">
-    <video id="videoPlayer3" width="100%" controls style="display:none;">
-        <source src="Video/Rick&Morty/I'm a leg! (Sub).mp4" type="video/mp4">
-    </video>
-    <audio id="audio3">
-        <source src="Audio/Rick&Morty/Rick and Morty Portal Sound Effect V1.mp3" type="audio/mp3">
-    </audio>
+        <section class="Back2"></section>
+        <!-- now a three column grid of images -->
+        <div class="FooterContent">
+            <!-- one "card" which includes an image with a text below it -->
+             <!-- Door 1-->
+            <div class="FooterContentBox">
+                <img src="images/Rick Garage door.png" alt="Portal" class="Rick-Garage-Door" 
+                onclick="playMedia('videoPlayer1', 'audio5')">
+            <video id="videoPlayer1" width="100%" controls style="display:none;">
+                <source src="Video/Rick&Morty/I'm a leg! (Sub).mp4" type="video/mp4">
+            </video>
+            <audio id="audio5">
+                <source src="Audio/Rick&Morty/Rick and Morty Portal Sound Effect V2.mp3" type="audio/mp3">
+            </audio>
+                <h2 class="FooterText">A <strong>LEG???</strong></h2>
+            </div>
+            <!-- Portal 1-->
+            <div class="FooterContentBox">
+                <img src="Gif/Rick&Morty/Rick Portal.gif" alt="Portal" class="FooterRickPortal" 
+                onclick="playMedia('videoPlayer2', 'audio6')">
+            <video id="videoPlayer2" width="100%" controls style="display:none;">
+                <source src="Video/Rick&Morty/I'm a pickle (Sub).mp4" type="video/mp4">
+            </video>
+            <audio id="audio6">
+                <source src="Audio/Rick&Morty/Rick and Morty Portal Sound Effect V2.mp3.mp3" type="audio/mp3">
+            </audio>
+                <h2 class="FooterText">Pickle?</h2>
+            </div>
+            <!-- Portal 2-->
+            <div class="FooterContentBox">
+                <img src="Gif/Rick&Morty/Rick Portal.gif" alt="Portal" class="FooterRickPortal" 
+                onclick="playMedia('videoPlayer3', 'audio7')">
+            <video id="videoPlayer3" width="100%" controls style="display:none;">
+                <source src="Video/Rick Roll (sub)720p.mp4" type="video/mp4">
+            </video>
+            <audio id="audio7">
+                <source src="Audio/Rick&Morty/Rick and Morty Portal Sound Effect V2.mp3.mp3" type="audio/mp3">
+            </audio>
+                <h2 class="FooterText">Ri-Ri-Rick? Is that you?</h2>
+            </div>
+        </div>
+    </section>
         <p>&copy; 2025 My Showcase Website By Arti. B</p>
         <a href="images/Oh, Really.jpg" target="_blank" class="SupportMeText">Support me by buying me Rtx 5090 :></a>
     </footer>
